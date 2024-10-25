@@ -8,8 +8,9 @@ Este é um projeto de API desenvolvido em Elixir utilizando o framework Phoenix.
 - **Elixir**: 1.17.3 (compilado com Erlang/OTP 27)
 - **Phoenix**: v1.7.14
 - **PostgreSQL**: Sistema de gerenciamento de banco de dados.
-- **Oban**: Biblioteca para gerenciamento de tarefas em segundo plano.
 - **VS Code**: Editor de código utilizado para desenvolvimento.
+- **Postman**: Executar testes e validações.
+- **Oban**: Biblioteca para gerenciamento de tarefas em segundo plano.
 
 ## Pré-requisitos
 
@@ -50,3 +51,39 @@ nvm install node
 
 #Instalando o Phoenix Installer
 mix archive.install hex phx_new
+
+Configurando o Projeto
+1. Clonando o Repositório
+Clone o repositório do projeto:
+
+git clone <URL_DO_SEU_REPOSITORIO>
+cd sorteios_api
+
+2. Instalando Dependências
+Instale as dependências do projeto:
+
+mix deps.get
+
+3. Configurando o Banco de Dados
+Criar o banco de dados:
+
+Edite o arquivo config/dev.exs para configurar suas credenciais do PostgreSQL.
+Depois, crie o banco de dados executando:
+
+mix ecto.create
+Rodar as migrações:
+
+mix ecto.migrate
+4. Executando a Aplicação
+Para iniciar o servidor Phoenix, execute:
+
+mix phx.server
+A aplicação estará disponível em http://localhost:4000.
+
+Estrutura do Projeto
+lib/sorteios_api: Contém a lógica principal da API.
+lib/sorteios_api_web: Contém a lógica relacionada à interface web da API.
+lib/sorteios_api_web/controllers: Contém os controladores da API.
+lib/sorteios_api_web/views: Contém as visualizações da API.
+lib/sorteios_api_web/schemas: Contém os esquemas Ecto.
+lib/sorteios_api_web/jobs: Contém os trabalhos que são agendados usando o Oban.
