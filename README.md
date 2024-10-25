@@ -21,7 +21,15 @@ Antes de começar, você precisa ter os seguintes itens instalados no seu sistem
 3. **PostgreSQL**: Versão 13 ou superior.
 4. **Node.js**: Para gerenciar as dependências do frontend.
 5. **Phoenix Installer**: Para criar novas aplicações Phoenix.
+6. **Postman**: Executar testes e validações.
 
+Estrutura do Projeto
+lib/sorteios_api: Contém a lógica principal da API.
+lib/sorteios_api_web: Contém a lógica relacionada à interface web da API.
+lib/sorteios_api_web/controllers: Contém os controladores da API.
+lib/sorteios_api_web/views: Contém as visualizações da API.
+lib/sorteios_api_web/schemas: Contém os esquemas Ecto.
+lib/sorteios_api_web/jobs: Contém os trabalhos que são agendados usando o Oban.
 ### Instalando Erlang e Elixir
 
 Se você estiver usando Ubuntu, siga os passos abaixo para instalar o Erlang e o Elixir:
@@ -79,11 +87,3 @@ Para iniciar o servidor Phoenix, execute:
 
 mix phx.server
 A aplicação estará disponível em http://localhost:4000.
-
-Estrutura do Projeto
-lib/sorteios_api: Contém a lógica principal da API.
-lib/sorteios_api_web: Contém a lógica relacionada à interface web da API.
-lib/sorteios_api_web/controllers: Contém os controladores da API.
-lib/sorteios_api_web/views: Contém as visualizações da API.
-lib/sorteios_api_web/schemas: Contém os esquemas Ecto.
-lib/sorteios_api_web/jobs: Contém os trabalhos que são agendados usando o Oban.
